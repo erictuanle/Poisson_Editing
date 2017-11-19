@@ -74,10 +74,10 @@ resulting_image = solve_poisson_equation(gradx,grady);
 % Recovering the mean values of images
 for color = 1:n_colors_back
     omega_color = image_omega_mod(:,:,color);
-    % Outside omega area
+    % Outside omega area - Background image
     outside_omega_area_back = image_background(:,:,color).*(1-omega_color);
     mean_value_outside_omega_back = sum(outside_omega_area_back(:))/sum(1-omega_color(:));
-    % Inside omega area
+    % Outside omega area - Element image
     outside_omega_area_element = image_element_mod(:,:,color).*(1-omega_color);
     mean_value_outside_omega_element = sum(outside_omega_area_element(:))/sum(1-omega_color(:));
     % Set the mean value,
