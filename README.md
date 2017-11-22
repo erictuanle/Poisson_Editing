@@ -8,5 +8,4 @@ Research studies led to conclude that humans were more sensitive to the Laplacia
 ==
 An example can be launched by running the Main.m script.
 
-<img src="https://github.com/erictuanle/Poisson_Editing/tree/master/Img/Sky.jpg?raw=true" width=45% height=100%> 
-<img src="https://github.com/erictuanle/Poisson_Editing/tree/master/Img/Cloning_Plane.jpg?raw=true" width=45% height=100%>
+<img src="https://github.com/erictuanle/Poisson_Editing/tree/master/Img/Sky.jpg" width=45% height=100%> <img src="https://github.com/erictuanle/Poisson_Editing/tree/master/Img/Cloning_Plane.jpg" width=45% height=100%>
