@@ -63,7 +63,7 @@ The method is composed of six successive steps:
 * Compute the Discrete Fourier Transform of the solution of the problem
 <p align="center"><img src="https://miro.medium.com/max/732/1*Fbr5LYHFpV_ddkvibsNShQ.png" width=200></p>
 
-<p align="center"><img src="https://miro.medium.com/max/7680/1*EfG7v2e4nQRFrDhP_VTGHQ.png" width=600></p>
+<p align="center"><img src="./Img/DFT_Solution.png" width=600></p>
 
 * Compute the inverse Fourier transform of the former image
 <p align="center"><img src="https://miro.medium.com/max/7680/1*yn_NMjaDER4Ckib78pz-nQ.png" width=600></p>
