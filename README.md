@@ -6,13 +6,12 @@
 ## Poisson Image editing
 The problem can be summarized as follow. Given an image **R**, we want to modify it on a small area **Ω**, a closed subset of **R²**, based on the information of another image.
 
-<div style="text-align:center"> <img src="https://miro.medium.com/max/380/1*m-4ZnTZ6_--dgVC7haLlkQ.png" width=430> <div style="text-align:left">
-
+<p align="center"><img src="https://miro.medium.com/max/380/1*m-4ZnTZ6_--dgVC7haLlkQ.png" width=430></p>
 Let’s take the example below where a plane needs to be placed from its original image (right image) to another one (left image). In order to do a seamless copy, one needs to make sure that the border of the moved element are not perceptible. A rough image edition will make inadequate color appears around the element (bottom image).
 
-<div style="text-align:center"> <img src="https://miro.medium.com/max/1403/1*_YKL9ZghtE-nK6Dsk7RIVQ.png" width=600> <div style="text-align:left">
+<div style="text-align:center"><img src="https://miro.medium.com/max/1403/1*_YKL9ZghtE-nK6Dsk7RIVQ.png" width=600>
 
-<div style="text-align:center"> <img src="https://miro.medium.com/max/3840/1*W64uGEGAoOgSsrdg8XpWmQ.png" width=600> <div style="text-align:left">
+<div style="text-align:center"><img src="https://miro.medium.com/max/3840/1*W64uGEGAoOgSsrdg8XpWmQ.png" width=600>
 
 Some research studies on human vision draws the conclusion that we are more sensitive to the Laplacian rather than the image as a whole. The Poisson Equation is therefore the right framework to derive a seamless solution to this forgery problem. We know the Laplacian value inside the domain and the border values, which is enough to reconstruct the image.
 
