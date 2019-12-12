@@ -38,17 +38,10 @@ To apply the Fourier method, the boudary of the domain **Ω** must coincide with
 The Neumann boundary condition is fulfilled by extending the original image symmetrically accross its axes. By doing so, we impose that **V**.**n**=0 on the boundary of the image **R**.
 
 The discrete Fourier transform of a periodic and band limited function **u** can be easily computed from the formula above if we know the function values on a **J**x**L** grid.
-<<<<<<< HEAD
-<p align="center"><img src="https://miro.medium.com/max/810/1*7zK8f0YfCo_DA-KbFBV0PA.png" width=200></p>
-
-In the Fourier domain, the Poisson equation becomes:
 <p align="center"><img src="https://miro.medium.com/max/1330/1*HWgBWthPjGqN6uSYHnhbzw.png" width=200></p>
-=======
-<p align="center"><img src="https://miro.medium.com/max/810/1*7zK8f0YfCo_DA-KbFBV0PA.png" width=300></p>
 
 In the Fourier domain, the Poisson equation becomes:
-<p align="center"><img src="https://miro.medium.com/max/1330/1*HWgBWthPjGqN6uSYHnhbzw.png" width=300></p>
->>>>>>> f79db6e97f997cff9253121f87d2e0f013d022ab
+<p align="center"><img src="https://miro.medium.com/max/810/1*7zK8f0YfCo_DA-KbFBV0PA.png" width=300></p>
 
 with **V**=(**V₁**,**V₂**). The equation allows us to retrieve the values of all Fourier coefficients, except the offset i.e. the mean of the solution. As a consequence, at the end of the Fourier method, one need to shift the pixel values so that all values belong to the interval [0,255]. A more natural alternative is to simply apply a color balance to span the full range for pixel values.
 
