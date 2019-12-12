@@ -25,23 +25,23 @@ Let’s take the example below where a plane needs to be placed from its origina
 Some research studies on human vision draws the conclusion that we are more sensitive to the Laplacian rather than the image as a whole. The Poisson Equation is therefore the right framework to derive a seamless solution to this forgery problem. We know the Laplacian value inside the domain and the border values, which is enough to reconstruct the image.
 
 Let’s note **b** the background image and **e** the image from which the element should be extracted: the resulting image is denoted **r**. The guidance vector field is given by:
-<p align="center"><img src="https://miro.medium.com/max/646/1*w8txr7yCvjtNBoRSbZIGJA.png" width=200></p>
+<p align="center"><img src="https://miro.medium.com/max/646/1*w8txr7yCvjtNBoRSbZIGJA.png" width=260></p>
 
 Therefore, image edition boils down to the following minimization problem:
 <p align="center"><img src="https://miro.medium.com/max/486/1*ozPO4BMZK6VwJ7FEu7ci4w.png" width=200></p>
 
 It can be proved (with a perturbation analysis) that this minimization problem admits a **C²** solution (first and second derivatives continuity). Moreover, this solution satisfies the Poisson equation with Neumann boudary condition:
-<p align="center"><img src="https://miro.medium.com/max/682/1*Skkpu0BP5v16XCf8RAZUuA.png" width=200></p>
+<p align="center"><img src="https://miro.medium.com/max/682/1*Skkpu0BP5v16XCf8RAZUuA.png" width=240></p>
 
 To apply the Fourier method, the boudary of the domain **Ω** must coincide with the coordinates line. To check this condition, one can simply extend the guidance vector field to the whole image **R** and solve the variational problem on this extended domain.
 
 The Neumann boundary condition is fulfilled by extending the original image symmetrically accross its axes. By doing so, we impose that **V**.**n**=0 on the boundary of the image **R**.
 
 The discrete Fourier transform of a periodic and band limited function **u** can be easily computed from the formula above if we know the function values on a **J**x**L** grid.
-<p align="center"><img src="https://miro.medium.com/max/1330/1*HWgBWthPjGqN6uSYHnhbzw.png" width=200></p>
+<p align="center"><img src="https://miro.medium.com/max/1330/1*HWgBWthPjGqN6uSYHnhbzw.png" width=420></p>
 
 In the Fourier domain, the Poisson equation becomes:
-<p align="center"><img src="https://miro.medium.com/max/810/1*7zK8f0YfCo_DA-KbFBV0PA.png" width=300></p>
+<p align="center"><img src="https://miro.medium.com/max/810/1*7zK8f0YfCo_DA-KbFBV0PA.png" width=330></p>
 
 with **V**=(**V₁**,**V₂**). The equation allows us to retrieve the values of all Fourier coefficients, except the offset i.e. the mean of the solution. As a consequence, at the end of the Fourier method, one need to shift the pixel values so that all values belong to the interval [0,255]. A more natural alternative is to simply apply a color balance to span the full range for pixel values.
 
@@ -61,7 +61,7 @@ The method is composed of six successive steps:
 <p align="center"><img src="https://miro.medium.com/max/1534/1*GnGG8F4H2F4hK6M5TuaxFA.png" width=600></p>
 
 * Compute the Discrete Fourier Transform of the solution of the problem
-<p align="center"><img src="https://miro.medium.com/max/732/1*Fbr5LYHFpV_ddkvibsNShQ.png" width=200></p>
+<p align="center"><img src="https://miro.medium.com/max/732/1*Fbr5LYHFpV_ddkvibsNShQ.png" width=320></p>
 
 <p align="center"><img src="./Img/DFT_Solution.png" width=600></p>
 
@@ -71,7 +71,6 @@ The method is composed of six successive steps:
 
 * Restrict the samples to the initial domain.
 <p align="center"><img src="https://miro.medium.com/max/3840/1*urL4PXYbGA-qQf3vq-cr-g.png" width=600></p>
-
 
 * Apply a colour balance algorithm
 <p align="center"><img src="https://miro.medium.com/max/3840/1*KCqBasamKHARfH-otzx0TQ.jpeg" width=600></p>
